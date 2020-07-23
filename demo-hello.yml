@@ -4,4 +4,4 @@
   tasks:
     - debug:
         msg: Folder already exists
-        msg: "Hello World!: {{survey_var}}"
+        msg: "Hello World!: {{extra_vars.survey_var}}"
