@@ -1,6 +1,6 @@
----
-  name: Check connectivity to remote servers
-  hosts: all #servergroup01
+- name: Hello World Sample
+  hosts: all
   tasks:
-    - name: ping
-      ping:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!: {{survey_var}}"
