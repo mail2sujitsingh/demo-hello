@@ -2,6 +2,8 @@
   gather_facts: false
   hosts: localhost
   tasks:
-    - debug:
-        msg: Folder already exists
-        msg: "Hello World!: {{survey_var}}"
+    - name: Hello Message
+      set_fact:
+        jsondata: "{{ user_data | from_json }}"
+      debug:
+        msg: "Hello World!: {{survey_var}} {{jsondata.user_email}}"
