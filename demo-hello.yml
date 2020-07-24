@@ -2,8 +2,10 @@
   gather_facts: false
   hosts: localhost
   tasks:
-    - name: Hello Message
+    - name: Setting JSON data
       set_fact:
         jsondata: "{{ user_data | from_json }}"
+        
+    - name: Getting JSON data for printing
       debug:
         msg: "Hello World!: {{survey_var}} {{jsondata.user_email}}"
