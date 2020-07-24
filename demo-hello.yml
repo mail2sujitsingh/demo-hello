@@ -4,4 +4,4 @@
   tasks:
     - debug:
         msg: Folder already exists
-        msg: "Hello World!: {{survey_var}} {{user_data.user_email}}"
+        msg: "Hello World!: {{survey_var}} {{user_data['user_email']}}"
